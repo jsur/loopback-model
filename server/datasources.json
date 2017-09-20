@@ -1,0 +1,8 @@
+{
+  "memdb": {
+    "name": "memdb",
+    "localStorage": "memdb",
+    "file": "./mem.db",
+    "connector": "memory"
+  }
+}
