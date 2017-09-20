@@ -1,0 +1,10 @@
+{
+  "ids": {
+    "Hero": 3
+  },
+  "models": {
+    "Hero": {
+      "2": "{\"Codename\":\"Superman\",\"Karma\":100,\"FirstName\":\"Clark\",\"LastName\":\"Kent\",\"id\":2}"
+    }
+  }
+}
