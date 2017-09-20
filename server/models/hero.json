@@ -1,0 +1,33 @@
+{
+  "name": "Hero",
+  "plural": "Heroes",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Codename": {
+      "type": "string",
+      "required": true
+    },
+    "Firstname": {
+      "type": "string"
+    },
+    "Lastname": {
+      "type": "string"
+    },
+    "Origin": {
+      "type": "string"
+    },
+    "Karma": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
