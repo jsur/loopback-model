@@ -1,13 +1,11 @@
-'use strict';
-
-module.exports = function(Hero) {
-  Hero.prototype.upvote = function(cb) {
-    var response = 'Yay! Hero did a good thing.';
+module.exports = (Hero) => {
+  Hero.prototype.upvote = function upvote(cb) {
+    const response = 'Yay! Hero did a good thing.';
     this.Karma += 1;
-    this.save(function(err, hero) {
+    this.save((err, hero) => {
       if (err) throw err;
 
-      cb(null, hero);
+      cb(null, { response, hero });
     });
   };
   Hero.remoteMethod('prototype.upvote', {
@@ -21,13 +19,13 @@ module.exports = function(Hero) {
     },
   });
 
-  Hero.prototype.downvote = function(cb) {
-    var response = 'Boo! Hero did a bad thing';
+  Hero.prototype.downvote = function downvote(cb) {
+    const response = 'Boo! Hero did a bad thing';
     this.Karma -= 1;
-    this.save(function(err, hero) {
+    this.save((err, hero) => {
       if (err) throw err;
 
-      cb(null, hero);
+      cb(null, { response, hero });
     });
   };
   Hero.remoteMethod('prototype.downvote', {

@@ -4,6 +4,7 @@
   },
   "initial": {
     "compression": {},
+    "./middleware/tracker": {},
     "cors": {
       "params": {
         "origin": true,

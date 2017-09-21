@@ -1,7 +1,5 @@
-'use strict';
-
-module.exports = function(app) {
-  app.models.Hero.count(function(err, count) {
+module.exports = (app) => {
+  app.models.Hero.count((err, count) => {
     if (err) throw err;
 
     console.log('Found', count, 'Heroes');
@@ -12,8 +10,8 @@ module.exports = function(app) {
         FirstName: 'Clark',
         LastName: 'Kent',
         Karma: 100,
-      }], function(err, heroes) {
-        if (err) throw err;
+      }], (error, heroes) => {
+        if (error) throw error;
 
         console.log('Models created:', heroes);
       });
